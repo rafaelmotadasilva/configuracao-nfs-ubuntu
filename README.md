@@ -1,6 +1,6 @@
 # Network File System (NFS)
 
-NFS permite *compartilhar* um diretório localizado em um computador em rede com outros computadores/dispositivos nessa rede. O computador onde o diretório está localizado é chamado de servidor e os computadores ou dispositivos conectados a esse servidor são chamados de clientes.
+NFS permite *compartilhar* um diretório localizado em um computador em rede com outros computadores ou dispositivos nessa rede. O computador onde o diretório está localizado é chamado de servidor e os computadores ou dispositivos conectados a esse servidor são chamados de clientes.
 
 ## Instalação
 
@@ -20,9 +20,9 @@ Você pode configurar os diretórios a serem exportados adicionando-os ao arquiv
 
 ```
 /srv     hostname1(ro,sync,subtree_check) hostname2(rw,async,no_subtree_check,no_root_squash)
-/home    *.hostname.com(rw,sync,no_subtree_check)
+/home    *.hostname.com(rw,sync,no_subtree_check) *(rw,async,no_subtree_check,no_root_squash)
 ```
-Certifique-se de que todos os pontos de montagem personalizados que você está adicionando foram criados (/srv e /home já existião):
+Certifique-se de que todos os pontos de montagem personalizados que você está adicionando foram criados (/srv e /home já existem):
 
 Aplique a nova configuração via:
 
