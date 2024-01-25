@@ -38,7 +38,7 @@ Para ativar o suporte NFS em um sistema cliente, digite o seguinte comando no te
 ```
 sudo apt install nfs-common
 ```
-Use o comando mount para montar um diretório NFS compartilhado de outra máquina, digitando uma linha de comando semelhante à seguinte em um terminal:
+Use o comando `mount` para montar um diretório NFS compartilhado de outra máquina, digitando uma linha de comando semelhante à seguinte em um terminal:
 
 ```
 sudo mkdir /opt/exemplo
@@ -53,4 +53,9 @@ A sintaxe da linha no arquivo `/etc/fstab` é a seguinte:
 
 ```
 exemplo.hostname.com:/srv /opt/exemplo nfs rsize=8192,wsize=8192,timeo=14,intr
+```
+Use o comando `mount -a` para montar todos os sistemas de arquivos mencionados no arquivo `/etc/fstab`, digite o seguinte comando no terminal:
+
+```
+sudo mount -a
 ```
